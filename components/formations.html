@@ -1,0 +1,416 @@
+<!-- Formations Section -->
+<section id="formations" class="py-16 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">Nos Formations</h2>
+            <p class="mt-4 max-w-2xl text-xl text-gray-500 mx-auto">Découvrez notre catalogue complet de formations adaptées à tous les niveaux.</p>
+        </div>
+        
+        <!-- Grille des 4 formations principales -->
+        <div id="formations-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+            <!-- Excel Card -->
+            <div class="formation-card bg-white rounded-lg shadow-lg overflow-hidden cursor-pointer transform hover:scale-105 transition duration-300" onclick="showFormation('excel')">
+                <div class="bg-green-600 p-8 text-center">
+                    <i class="fas fa-file-excel text-white text-6xl mb-4"></i>
+                    <h3 class="text-2xl font-bold text-white">Excel</h3>
+                </div>
+                <div class="p-6">
+                    <p class="text-gray-600 mb-6 text-center">Maîtrisez Excel de A à Z, des bases aux fonctionnalités avancées comme Power Query.</p>
+                    <button class="w-full bg-green-600 hover:bg-green-700 text-white py-3 px-4 rounded-lg font-semibold transition duration-300">
+                        En savoir plus
+                    </button>
+                </div>
+            </div>
+
+            <!-- Power BI Card -->
+            <div class="formation-card bg-white rounded-lg shadow-lg overflow-hidden cursor-pointer transform hover:scale-105 transition duration-300" onclick="showFormation('powerbi')">
+                <div class="bg-yellow-600 p-8 text-center">
+                    <i class="fas fa-chart-pie text-white text-6xl mb-4"></i>
+                    <h3 class="text-2xl font-bold text-white">Power BI</h3>
+                </div>
+                <div class="p-6">
+                    <p class="text-gray-600 mb-6 text-center">Créez des tableaux de bord interactifs et maîtrisez le langage DAX pour l'analyse de données.</p>
+                    <button class="w-full bg-yellow-600 hover:bg-yellow-700 text-white py-3 px-4 rounded-lg font-semibold transition duration-300">
+                        En savoir plus
+                    </button>
+                </div>
+            </div>
+
+            <!-- DHIS2 Card -->
+            <div class="formation-card bg-white rounded-lg shadow-lg overflow-hidden cursor-pointer transform hover:scale-105 transition duration-300" onclick="showFormation('dhis2')">
+                <div class="bg-blue-600 p-8 text-center">
+                    <i class="fas fa-database text-white text-6xl mb-4"></i>
+                    <h3 class="text-2xl font-bold text-white">DHIS2</h3>
+                </div>
+                <div class="p-6">
+                    <p class="text-gray-600 mb-6 text-center">Gérez et analysez les données de santé avec la plateforme DHIS2, de l'utilisation à l'administration.</p>
+                    <button class="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 px-4 rounded-lg font-semibold transition duration-300">
+                        En savoir plus
+                    </button>
+                </div>
+            </div>
+
+            <!-- Kobotoolbox Card -->
+            <div class="formation-card bg-white rounded-lg shadow-lg overflow-hidden cursor-pointer transform hover:scale-105 transition duration-300" onclick="showFormation('kobo')">
+                <div class="bg-purple-600 p-8 text-center">
+                    <i class="fas fa-mobile-alt text-white text-6xl mb-4"></i>
+                    <h3 class="text-2xl font-bold text-white">Kobotoolbox</h3>
+                </div>
+                <div class="p-6">
+                    <p class="text-gray-600 mb-6 text-center">Collectez des données sur le terrain avec Kobotoolbox, des formulaires simples aux enquêtes complexes.</p>
+                    <button class="w-full bg-purple-600 hover:bg-purple-700 text-white py-3 px-4 rounded-lg font-semibold transition duration-300">
+                        En savoir plus
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bouton Retour (caché par défaut) -->
+        <div id="back-button" class="hidden mb-8">
+            <button onclick="showGrid()" class="bg-gray-600 hover:bg-gray-700 text-white py-3 px-6 rounded-lg font-semibold transition duration-300 flex items-center">
+                <i class="fas fa-arrow-left mr-2"></i>
+                Retour aux formations
+            </button>
+        </div>
+
+        <!-- Excel Formations (caché par défaut) -->
+        <div id="excel-formations" class="formation-detail hidden">
+            <div class="flex items-center mb-8">
+                <div class="bg-green-100 p-3 rounded-full mr-4">
+                    <i class="fas fa-file-excel text-green-600 text-2xl"></i>
+                </div>
+                <h3 class="text-2xl font-bold text-gray-900">Formations Excel</h3>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="course-card bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="bg-green-600 p-4 text-white">
+                        <h4 class="font-bold text-xl">Excel Fondamentaux</h4>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-600 mb-4">Maîtrisez les bases d'Excel : interface, saisie, mise en forme et premières formules.</p>
+                        <ul class="mb-6 space-y-2">
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span>Durée : 2 jours</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span>Niveau : Débutant</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span>Certification incluse</span>
+                            </li>
+                        </ul>
+                        <button class="w-full bg-green-600 hover:bg-green-700 text-white py-2 px-4 rounded transition duration-300">En savoir plus</button>
+                    </div>
+                </div>
+                
+                <div class="course-card bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="bg-green-700 p-4 text-white">
+                        <h4 class="font-bold text-xl">Calcul et Fonction</h4>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-600 mb-4">Approfondissez vos connaissances des fonctions Excel pour des calculs avancés.</p>
+                        <ul class="mb-6 space-y-2">
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span>Durée : 3 jours</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span>Niveau : Intermédiaire</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span>Exercices pratiques</span>
+                            </li>
+                        </ul>
+                        <button class="w-full bg-green-700 hover:bg-green-800 text-white py-2 px-4 rounded transition duration-300">En savoir plus</button>
+                    </div>
+                </div>
+                
+                <div class="course-card bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="bg-green-800 p-4 text-white">
+                        <h4 class="font-bold text-xl">Excel analyse des données</h4>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-600 mb-4">Apprenez à analyser et visualiser vos données avec les outils avancés d'Excel.</p>
+                        <ul class="mb-6 space-y-2">
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span>Durée : 2 jours</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span>Niveau : Avancé</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span>Cas réels d'entreprise</span>
+                            </li>
+                        </ul>
+                        <button class="w-full bg-green-800 hover:bg-green-900 text-white py-2 px-4 rounded transition duration-300">En savoir plus</button>
+                    </div>
+                </div>
+                
+                <div class="course-card bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="bg-green-900 p-4 text-white">
+                        <h4 class="font-bold text-xl">Excel Power Query</h4>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-600 mb-4">Automatisez l'import et la transformation de vos données avec Power Query.</p>
+                        <ul class="mb-6 space-y-2">
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span>Durée : 2 jours</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span>Niveau : Expert</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span>Projet final</span>
+                            </li>
+                        </ul>
+                        <button class="w-full bg-green-900 hover:bg-gray-900 text-white py-2 px-4 rounded transition duration-300">En savoir plus</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Power BI Formations (caché par défaut) -->
+        <div id="powerbi-formations" class="formation-detail hidden">
+            <div class="flex items-center mb-8">
+                <div class="bg-yellow-100 p-3 rounded-full mr-4">
+                    <i class="fas fa-chart-pie text-yellow-600 text-2xl"></i>
+                </div>
+                <h3 class="text-2xl font-bold text-gray-900">Formations Power BI</h3>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="course-card bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="bg-yellow-500 p-4 text-white">
+                        <h4 class="font-bold text-xl">Power BI Fondamentaux</h4>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-600 mb-4">Découvrez Power BI et créez vos premiers tableaux de bord interactifs.</p>
+                        <ul class="mb-6 space-y-2">
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-yellow-500 mr-2"></i>
+                                <span>Durée : 3 jours</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-yellow-500 mr-2"></i>
+                                <span>Niveau : Débutant</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-yellow-500 mr-2"></i>
+                                <span>Données réelles</span>
+                            </li>
+                        </ul>
+                        <button class="w-full bg-yellow-500 hover:bg-yellow-600 text-white py-2 px-4 rounded transition duration-300">En savoir plus</button>
+                    </div>
+                </div>
+                
+                <div class="course-card bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="bg-yellow-600 p-4 text-white">
+                        <h4 class="font-bold text-xl">Power BI Intermédiaire</h4>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-600 mb-4">Approfondissez vos compétences avec des visualisations avancées et des modèles complexes.</p>
+                        <ul class="mb-6 space-y-2">
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-yellow-500 mr-2"></i>
+                                <span>Durée : 3 jours</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-yellow-500 mr-2"></i>
+                                <span>Niveau : Intermédiaire</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-yellow-500 mr-2"></i>
+                                <span>Projets pratiques</span>
+                            </li>
+                        </ul>
+                        <button class="w-full bg-yellow-600 hover:bg-yellow-700 text-white py-2 px-4 rounded transition duration-300">En savoir plus</button>
+                    </div>
+                </div>
+                
+                <div class="course-card bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="bg-yellow-700 p-4 text-white">
+                        <h4 class="font-bold text-xl">Power BI DAX Expert</h4>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-600 mb-4">Maîtrisez le langage DAX pour des analyses de données sophistiquées.</p>
+                        <ul class="mb-6 space-y-2">
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-yellow-500 mr-2"></i>
+                                <span>Durée : 4 jours</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-yellow-500 mr-2"></i>
+                                <span>Niveau : Avancé</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-yellow-500 mr-2"></i>
+                                <span>Certification Microsoft</span>
+                            </li>
+                        </ul>
+                        <button class="w-full bg-yellow-700 hover:bg-yellow-800 text-white py-2 px-4 rounded transition duration-300">En savoir plus</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- DHIS2 Formations (caché par défaut) -->
+        <div id="dhis2-formations" class="formation-detail hidden">
+            <div class="flex items-center mb-8">
+                <div class="bg-blue-100 p-3 rounded-full mr-4">
+                    <i class="fas fa-database text-blue-600 text-2xl"></i>
+                </div>
+                <h3 class="text-2xl font-bold text-gray-900">Formations DHIS2</h3>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="course-card bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="bg-blue-600 p-4 text-white">
+                        <h4 class="font-bold text-xl">DHIS2 pour Utilisateurs</h4>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-600 mb-4">Apprenez à utiliser DHIS2 pour la collecte, la gestion et l'analyse des données de santé.</p>
+                        <ul class="mb-6 space-y-2">
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-blue-500 mr-2"></i>
+                                <span>Durée : 5 jours</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-blue-500 mr-2"></i>
+                                <span>Niveau : Débutant à Intermédiaire</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-blue-500 mr-2"></i>
+                                <span>Saisie et validation des données</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-blue-500 mr-2"></i>
+                                <span>Création de rapports et tableaux de bord</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-blue-500 mr-2"></i>
+                                <span>Analyse de données avec DHIS2</span>
+                            </li>
+                        </ul>
+                        <button class="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded transition duration-300">En savoir plus</button>
+                    </div>
+                </div>
+                
+                <div class="course-card bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="bg-blue-800 p-4 text-white">
+                        <h4 class="font-bold text-xl">DHIS2 Installation & Conception</h4>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-600 mb-4">Formation avancée sur l'installation, la configuration et la conception de programmes DHIS2 sur mesure.</p>
+                        <ul class="mb-6 space-y-2">
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-blue-500 mr-2"></i>
+                                <span>Durée : 7 jours</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-blue-500 mr-2"></i>
+                                <span>Niveau : Avancé</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-blue-500 mr-2"></i>
+                                <span>Installation et configuration serveur</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-blue-500 mr-2"></i>
+                                <span>Conception de programmes personnalisés</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-blue-500 mr-2"></i>
+                                <span>Maintenance et optimisation</span>
+                            </li>
+                        </ul>
+                        <button class="w-full bg-blue-800 hover:bg-blue-900 text-white py-2 px-4 rounded transition duration-300">En savoir plus</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Kobotoolbox Formations (caché par défaut) -->
+        <div id="kobo-formations" class="formation-detail hidden">
+            <div class="flex items-center mb-8">
+                <div class="bg-purple-100 p-3 rounded-full mr-4">
+                    <i class="fas fa-mobile-alt text-purple-600 text-2xl"></i>
+                </div>
+                <h3 class="text-2xl font-bold text-gray-900">Formations Kobotoolbox</h3>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="course-card bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="bg-purple-600 p-4 text-white">
+                        <h4 class="font-bold text-xl">Kobotoolbox Niveau I</h4>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-600 mb-4">Initiez-vous à la collecte de données mobile avec Kobotoolbox et créez vos premiers formulaires.</p>
+                        <ul class="mb-6 space-y-2">
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-purple-500 mr-2"></i>
+                                <span>Durée : 3 jours</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-purple-500 mr-2"></i>
+                                <span>Niveau : Débutant</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-purple-500 mr-2"></i>
+                                <span>Création de formulaires simples</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-purple-500 mr-2"></i>
+                                <span>Collecte de données terrain</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-purple-500 mr-2"></i>
+                                <span>Export et analyse de base</span>
+                            </li>
+                        </ul>
+                        <button class="w-full bg-purple-600 hover:bg-purple-700 text-white py-2 px-4 rounded transition duration-300">En savoir plus</button>
+                    </div>
+                </div>
+                
+                <div class="course-card bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="bg-purple-800 p-4 text-white">
+                        <h4 class="font-bold text-xl">Kobotoolbox Niveau II</h4>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-600 mb-4">Maîtrisez les fonctionnalités avancées de Kobotoolbox pour des enquêtes complexes.</p>
+                        <ul class="mb-6 space-y-2">
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-purple-500 mr-2"></i>
+                                <span>Durée : 4 jours</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-purple-500 mr-2"></i>
+                                <span>Niveau : Avancé</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-purple-500 mr-2"></i>
+                                <span>Formulaires avec logique complexe</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-purple-500 mr-2"></i>
+                                <span>Gestion multi-utilisateurs</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-purple-500 mr-2"></i>
+                                <span>API et intégrations avancées</span>
+                            </li>
+                        </ul>
+                        <button class="w-full bg-purple-800 hover:bg-purple-900 text-white py-2 px-4 rounded transition duration-300">En savoir plus</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
